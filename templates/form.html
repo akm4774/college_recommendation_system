@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Helper</title>
+    <link rel="stylesheet" href="static/form.css">
+</head>
+<body>
+    <header class="head">
+        <img src="static/LNCT-Logo.png" alt="error">
+    </header>
+    <div class="form">
+        <div class="title">Welcome!</div>
+        <div class="subtitle">
+            <svg width="500" height="50">
+                <text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" class="animated-text">
+                    Please fill these details carefully:
+                </text>
+            </svg>
+        </div>
+        <form method="POST" action="{{ url_for('submit_form') }}">
+            <div class="input-container ic1">
+                <input id="firstname" class="input" type="text" placeholder=" " />
+                <div class="cut"></div>
+                <label for="firstname" class="placeholder">First name</label>
+            </div>
+            <div class="input-container ic1 ic2">
+                <input id="lastname" class="input" type="text" placeholder=" " />
+                <div class="cut"></div>
+                <label for="lastname" class="placeholder">Last name</label>
+            </div>
+            <div class="input-container ic1">
+                <input id="email" class="input" type="text" placeholder=" " />
+                <div class="cut cut-short"></div>
+                <label for="email" class="placeholder">Email</label>
+            </div>
+            <!-- JEE Percentile Input -->
+            <div class="input-container ic1 ic2">
+                <input id="jee_percentile" class="input" type="number" placeholder=" " />
+                <div class="cut cut-med"></div>
+                <label for="jee_percentile" class="placeholder">JEE Percentile</label>
+            </div>
+            <div class="input-container ic1 ">
+                <input id="interest" class="input" type="text" placeholder=" " />
+                <div class="cut cut-med"></div>
+                <label for="interest" class="placeholder">Interest Field</label>
+            </div>
+            <div class="input-container ic1 ic2">
+                <input id="dream_company" class="input" type="text" placeholder=" " />
+                <div class="cut cut-long"></div>
+                <label for="dream_company" class="placeholder">Dream Company</label>
+            </div>
+            <div class="input-container ic1">
+                <input id="locality" class="input" type="text" placeholder=" " />
+                <div class="cut cut-med"></div>
+                <label for="locality" class="placeholder">Locality</label>
+            </div>
+            <div class="checkbox-container ic1 ic2">
+                <input type="checkbox" id="scholarship" name="scholarship">
+                <label for="scholarship">Scholarship</label>
+            </div>
+
+            <button type="submit" class="submit button-arounder">Submit</button>
+        </form> 
+    </div>
+</body>
+</html>
