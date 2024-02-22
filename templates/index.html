@@ -39,12 +39,23 @@
       
                       </div>
                     </div>
-                    <div class="row hello">
+                    <div class="row hqq">
+                      <div class="col-md-6 mb-4">
+      
+                        <h6 class="mb-2 pb-1">Higher Education: </h6>
+      
+                        <div class="form-check form-check-inline">
+                          <label><input type="radio" name="option" id="yes" onclick="toggleInput()"> Diploma</label>
+                          <label><input type="radio" name="option" id="no" onclick="toggleInput()"> 12th</label>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="row " id="higher_12">
                         <div class="col-md-6 mb-4 display">
         
                             <label class="form-label select-label" for="branch">12th Branch</label>
                           <select class="select form-control-lg" id="branch">
-                            <!-- <option value="1" class="h1" disabled>Choose Branch</option> -->
                             <option value="1">PCM</option>
                             <option value="2">PCB</option>
                             <option value="3">Commerce</option>
@@ -65,7 +76,7 @@
       
                       </div>
                     </div>
-                    <div class="row hello1">
+                    <div class="row" id="diploma1">
                         <div class="col-md-6 mb-4 display">
         
                             <label class="form-label select-label" for="branch">Diploma Branch</label>
@@ -82,9 +93,9 @@
                       <div class="col-md-6 mb-4 pb-2">
       
                         <div class="form-outline">
-                            <label class="form-label" for="12th_marks">Diploma Marks</label>
-                          <input type="number" id="12th_marks" class="form-control form-control-lg" name="12th_marks" required/>
-                          <label for="12th_marks" class="form-label label">Please enter marks</label>
+                            <label class="form-label" for="diploma">Diploma Marks</label>
+                          <input type="number" id="diploma" class="form-control form-control-lg" name="diploma" required/>
+                          <label for="diploma" class="form-label label">Please enter marks</label>
                        
                         </div>
       
@@ -140,16 +151,6 @@
                     <div class="row">
                       <div class="col-12">
       
-                        <!-- <select class="select form-control-lg">
-                          <option value="1" disabled>Choose option</option>
-                          <option value="1">Business</option>
-                          <option value="2">Administration</option>
-                          <option value="3">Entrepreneurship</option>
-                          <option value="4">Strategy</option>
-                          <option value="5">Finance</option>
-                          <option value="6">Marketing</option>
-                          <option value="7">Leadership</option>
-                        </select> -->
                         <label class="form-label select-label">Choose Interest</label> <br/>
                         <input type="checkbox"><label>Technology</label>
                         <input type="checkbox"><label>Robotics</label>
@@ -171,5 +172,21 @@
           </div>
         </div>
       </section>
+      <script>
+        function toggleInput() {
+            var yesRadio = document.getElementById('yes');
+            var noRadio = document.getElementById('no');
+            var higher_123 = document.getElementById('higher_12');
+            var higher_diploma= document.getElementById('diploma1');
+
+            if (yesRadio.checked) {
+                higher_123.style.display = 'none';
+                higher_diploma.style.display = 'flex';
+            } else {
+                higher_123.style.display = 'flex';
+                higher_diploma.style.display = 'none';
+            }
+        }
+      </script>
 </body>
 </html>
