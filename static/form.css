@@ -73,7 +73,7 @@ body {
   border-radius: 20px;
   box-sizing: border-box;
   height: 100%;
-  width: 80vw;
+  width: 60vw;
   padding: 20px;
   margin:2% auto  5% auto;
 }
@@ -99,7 +99,7 @@ body {
 form{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* width: 60vw; */
+  width: 60vw;
 }
 
 .input-container {
